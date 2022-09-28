@@ -16,6 +16,11 @@ export class ContactForm extends Component {
     this.setState({ [name]: value });
   };
 
+  //   checkChange = e => {
+  //     const { name } = e.target;
+  //     return !this.state[name] ? false : true;
+  //   };
+
   handleSubmit = e => {
     e.preventDefault();
     this.props.onSubmit(this.state);
@@ -61,7 +66,9 @@ export class ContactForm extends Component {
             value={number}
             onChange={this.handleChange}
           />
-          <Button type="submit">Add contact</Button>
+          <Button type="submit" disabled={!this.state.name}>
+            Add contact
+          </Button>
         </Form>
       </Box>
     );
