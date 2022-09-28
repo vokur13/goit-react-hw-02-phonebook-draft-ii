@@ -29,7 +29,14 @@ export class ContactForm extends Component {
   render() {
     const { name, number } = this.state;
     return (
-      <Box width="50%">
+      <Box
+        display="block"
+        p={2}
+        bg="bgComponent"
+        width="50%"
+        borderRadius="normal"
+        boxShadow="basic"
+      >
         <Form onSubmit={this.handleSubmit}>
           <Label htmlFor={this.nameId}>Name</Label>
           <Input
