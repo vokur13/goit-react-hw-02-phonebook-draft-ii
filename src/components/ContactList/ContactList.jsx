@@ -1,24 +1,36 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Box } from '../Box';
+import { List, Item, Name, Number } from './ContactList.styled';
+import { Button } from '../Button';
 
 export const ContactList = ({ list, onDelete }) => {
   return (
-    <ul>
-      {list.map(item => (
-        <li key={item.id} style={{ display: 'flex' }}>
-          <p style={{ marginRight: '5px' }}>{item.name + ':'}</p>
-          <p>{item.number}</p>
-          <button
-            type="button"
-            onClick={() => {
-              onDelete(item.id);
-            }}
-          >
-            Delete
-          </button>
-        </li>
-      ))}
-    </ul>
+    <Box
+      display="block"
+      p={2}
+      bg="bgComponent"
+      width="50%"
+      borderRadius="normal"
+      boxShadow="basic"
+    >
+      <List>
+        {list.map(item => (
+          <Item key={item.id}>
+            <Name>{item.name + ':'}</Name>
+            <Number>{item.number}</Number>
+            <Button
+              type="button"
+              onClick={() => {
+                onDelete(item.id);
+              }}
+            >
+              Delete
+            </Button>
+          </Item>
+        ))}
+      </List>
+    </Box>
   );
 };
 

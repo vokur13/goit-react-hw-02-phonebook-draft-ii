@@ -32,6 +32,7 @@ export class ContactForm extends Component {
       <Box
         display="block"
         p={2}
+        mb={4}
         bg="bgComponent"
         width="50%"
         borderRadius="normal"

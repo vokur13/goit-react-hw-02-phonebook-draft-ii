@@ -5,9 +5,10 @@ export const Button = ({
   type = 'button',
   disabled = false,
   children,
+  onClick,
 }) => {
   return (
-    <StyledButton type={type} disabled={disabled}>
+    <StyledButton type={type} disabled={disabled} onClick={onClick}>
       {Icon && <Icon size="16" />}
       {children}
     </StyledButton>

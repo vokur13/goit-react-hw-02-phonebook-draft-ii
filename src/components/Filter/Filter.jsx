@@ -11,6 +11,7 @@ export const Filter = ({ value, onChange }) => {
     <Box
       display="block"
       p={2}
+      mb={3}
       bg="bgComponent"
       width="50%"
       borderRadius="normal"
