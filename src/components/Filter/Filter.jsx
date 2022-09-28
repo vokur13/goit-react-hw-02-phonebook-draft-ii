@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { nanoid } from 'nanoid';
 
 export const Filter = ({ value, onChange }) => {
@@ -10,4 +11,9 @@ export const Filter = ({ value, onChange }) => {
       <input id={filterID} type="text" value={value} onChange={onChange} />
     </div>
   );
+};
+
+Filter.propTypes = {
+  value: PropTypes.string,
+  onChange: PropTypes.func.isRequired,
 };
