@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Box } from '../components/Box';
 import { ContactForm } from '../components/ContactForm';
 import { Filter } from '../components/Filter';
 import { ContactList } from '../components/ContactList';
@@ -64,14 +65,14 @@ export class App extends Component {
     const filteredItem = this.getFilteredItems();
 
     return (
-      <div>
+      <Box width={1} p={4} bg="bgBasic" as="main">
         <h1>Phonebook</h1>
         <ContactForm onSubmit={this.formSubmitHandler} />
 
         <h2>Contacts</h2>
         <Filter value={filter} onChange={this.changeFilter} />
         <ContactList onDelete={this.deleteItem} list={filteredItem} />
-      </div>
+      </Box>
     );
   }
 }

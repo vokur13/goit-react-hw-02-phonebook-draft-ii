@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 export const StyledButton = styled.button`
-  display: inline-flex;
+  display: block;
   align-items: center;
   gap: ${props => props.theme.space[2]}px;
-  margin: ${props => props.theme.space[0]}px;
-  padding-top: ${props => props.theme.space[3]}px;
-  padding-bottom: ${props => props.theme.space[3]}px;
+  margin-top: ${props => props.theme.space[2]}px;
+  padding-top: ${props => props.theme.space[2]}px;
+  padding-bottom: ${props => props.theme.space[2]}px;
   padding-left: ${props => props.theme.space[4]}px;
   padding-right: ${props => props.theme.space[4]}px;
   border: ${props => props.theme.borders.normal};

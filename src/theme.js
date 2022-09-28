@@ -3,7 +3,8 @@ export const theme = {
     black: '#000',
     white: '#fff',
     text: '#2a2a2a',
-    background: '#fff',
+    bgBasic: '#d4d4d4',
+    bgComponent: '#f5eece',
     primary: '#07c',
     secondary: '#05a',
     accent: '#609',
@@ -39,10 +40,13 @@ export const theme = {
       '1em': '1em',
     },
   },
-
   radii: {
     none: '0',
     normal: '4px',
     round: '50%',
+  },
+  shadows: {
+    basic:
+      '0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);',
   },
 };
